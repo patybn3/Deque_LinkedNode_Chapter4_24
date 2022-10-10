@@ -1,9 +1,7 @@
 /*this class uses an array to simulate a queue, numbers are added to the array through
-a loop, passed by the main method on file Chapter4_15_PatriciaAntlitz.java.
+a loop, passed by the main method on file Chapter4_24_PatriciaAntlitz.java.
 This class can print the size and the list of numbers, remove, add from both front and end of the list
  */
-
-import javax.swing.*;
 
 public class DeQue<T> implements DequeInterface<T>
 {
@@ -26,7 +24,7 @@ public class DeQue<T> implements DequeInterface<T>
 
         if (isFull())
         {
-            throw new QueueUnderflowException("Enqueue attempted on a full queue.");
+            throw new QueueOverflowException("Enqueue attempted on a full queue.");
         }
         else
         {
@@ -42,7 +40,7 @@ public class DeQue<T> implements DequeInterface<T>
         LLNode<T> newNodeBack = new LLNode<T>(element);
 
         if (isFull())
-            throw new QueueUnderflowException("Enqueue attempted on a full queue.");
+            throw new QueueOverflowException("Enqueue attempted on a full queue.");
         else
         {
             if (rear == null)
@@ -120,7 +118,7 @@ public class DeQue<T> implements DequeInterface<T>
     {
         String getString = "";
         LLNode<T> itemFront = front;
-        //exception
+
         if(isEmpty()) {
             throw new QueueUnderflowException("Error. Queue is Empty.");
         }
