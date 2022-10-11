@@ -60,5 +60,13 @@ public class Chapter4_24_PatriciaAntlitz
         newList.dequeueRear();
         newList.toString();
         System.out.println("\nQueue Size: " + newList.size());
+
+        newList.dequeueRear();
+        newList.toString();
+        System.out.println("\nQueue Size: " + newList.size());
+
+        newList.enqueueFront(21);
+        newList.toString();
+        System.out.println("\nQueue Size: " + newList.size());
     }
 }

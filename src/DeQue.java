@@ -71,29 +71,25 @@ public class DeQue<T> implements DequeInterface<T>
     }
 
     @Override
-    public T dequeueRear() throws QueueUnderflowException {
-      // T element;
-//
-        System.out.println("\nItem Removed From The Back:");
+    public T dequeueRear() throws QueueUnderflowException
+    {
+        LLNode<T> element;
+        System.out.println("\nRemoving From The Back:");
 
-        if (isEmpty()) {
-            throw new QueueUnderflowException("Remove attempted on empty queue.");
-        }
-        else if(front == null || front.getLink() == null)
+        if (isEmpty())
         {
-            return  null;
+            throw new QueueUnderflowException("dequeue rear attempted on empty queue.");
         }
         else
         {
-            LLNode<T> element = front;
-           while(element.getLink().getLink() != null)
-           {
+            element = this.front;
+            while (element.getLink().getLink() != null) {
                 element = element.getLink();
-           }
-           numElements--;
+            }
+            element.link = null;
+            numElements--;
         }
-
-        return (T) front;
+        return element.info;
     }
 
     public boolean isFull()
