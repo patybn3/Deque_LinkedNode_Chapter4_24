@@ -9,6 +9,7 @@ Class: CIS-252 Computer Science II - NECC Fall 2022
 
  * This file is the main class that runs this program
  * newList object is created from the DeQue.java which implements an interface, DequeInterface.java class
+ * It uses the node file DLLNode.java for the usage of doubly-linked node lists.
  * The following files are NOT original to this code (not coded by me):
     * DequeInterface.java
     * QueueUnderflowException.java

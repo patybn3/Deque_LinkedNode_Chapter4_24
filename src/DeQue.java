@@ -1,8 +1,7 @@
-/*this class uses an array to simulate a queue, numbers are added to the array through
-a loop, passed by the main method on file Chapter4_24_PatriciaAntlitz.java.
-This class can print the size and the list of numbers, remove, add from both front and end of the list
+/*this class uses an doubly-linked node list to simulate a queue, numbers are added to the list through
+a loop, passed by the main method on file Chapter4_34_PatriciaAntlitz.java.
+This class can print the size and the list of numbers, add from both front and end of the list, and remove from the front, and from the back
  */
-
 public class DeQue<T> implements DequeInterface<T>
 {
     protected LLNode<T> front;     // reference to the front of this queue
